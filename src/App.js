@@ -4,13 +4,20 @@ import React from "react";
 function App() {
   console.log("app");
 
+  function alertMe() {
+    alert(`Hello from ${window.location.hostname}`);
+    console.log("Alert");
+  }
+
   return (
     <div className="app">
-      <h1 className="title">React - AtlasKit</h1>
+      <h4 className="title">React - AtlasKit</h4>
 
       <div className="app-buttons">
+        <Button appearance="primary" onClick={alertMe}>
+          Click me
+        </Button>
         <Button>Click me</Button>
-        <Button appearance="primary">Click me</Button>
         <Button appearance="danger">Click me</Button>
         <Button appearance="warning">Click me</Button>
       </div>
